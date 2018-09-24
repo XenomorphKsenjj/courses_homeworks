@@ -2,7 +2,7 @@ import random
 
 number = int(input("Please enter a number:"))
 
-random_number = (random.randint(0, number))
+random_number = random.randint(0, number)
 
 print("The random number from 0 to", number, "is", random_number)
 
