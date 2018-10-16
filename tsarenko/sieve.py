@@ -1,22 +1,19 @@
-n = int(input("Enter number:"))
-a = [0] * n
-for i in range(n):
-    a[i] = i
+user_input = int(input("Enter number:"))
 
-a[1] = 0
+old_list = list(range(user_input))
 
-m = 2
-while m < n:
-    if a[m] != 0:
-        j = m * 2
-        while j < n:
-                a[j] = 0
-                j = j + m
-    m += 1
+old_list[1] = 0
 
-b = []
-for i in a:
-    if a[i] != 0:
-        b.append(a[i])
+prime_index = 2
+while prime_index < user_input:
+    if old_list[prime_index] != 0:
+        composite_index = prime_index * 2
+        while composite_index < user_input:
+            old_list[composite_index] = 0
+            composite_index = composite_index + prime_index
+    prime_index += 1
 
-print(b)
+new_list = [i for i in old_list if i != 0]
+
+print(new_list)
+

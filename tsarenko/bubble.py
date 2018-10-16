@@ -3,7 +3,7 @@ import random
 random_length = random.randint(1, 20)
 
 my_list = random.sample(range(100), random_length)
-print(list)
+print(my_list)
 
 n = 1
 
